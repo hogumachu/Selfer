@@ -23,6 +23,11 @@
 		F180034629A60CF5000E2E28 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180034529A60CF5000E2E28 /* UICollectionView+.swift */; };
 		F180034829A60D04000E2E28 /* UICollectionView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180034729A60D04000E2E28 /* UICollectionView+Rx.swift */; };
 		F180034A29A60D16000E2E28 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180034929A60D16000E2E28 /* UIViewController+Rx.swift */; };
+		F180034D29A6153D000E2E28 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180034C29A6153D000E2E28 /* Entity.swift */; };
+		F180034F29A61564000E2E28 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180034E29A61564000E2E28 /* Repository.swift */; };
+		F180035229A616B1000E2E28 /* QuestionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180035129A616B1000E2E28 /* QuestionEntity.swift */; };
+		F180035429A6171F000E2E28 /* QuestionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180035329A6171F000E2E28 /* QuestionObject.swift */; };
+		F180035629A61834000E2E28 /* QuestionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180035529A61834000E2E28 /* QuestionRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +50,11 @@
 		F180034529A60CF5000E2E28 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		F180034729A60D04000E2E28 /* UICollectionView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Rx.swift"; sourceTree = "<group>"; };
 		F180034929A60D16000E2E28 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		F180034C29A6153D000E2E28 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		F180034E29A61564000E2E28 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		F180035129A616B1000E2E28 /* QuestionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionEntity.swift; sourceTree = "<group>"; };
+		F180035329A6171F000E2E28 /* QuestionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionObject.swift; sourceTree = "<group>"; };
+		F180035529A61834000E2E28 /* QuestionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRepository.swift; sourceTree = "<group>"; };
 		F968F3DA6E7CD8260C8CB856 /* Pods-Selfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfer.debug.xcconfig"; path = "Target Support Files/Pods-Selfer/Pods-Selfer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +110,7 @@
 			children = (
 				F180031E29A60108000E2E28 /* AppDelegate.swift */,
 				F180032029A60108000E2E28 /* SceneDelegate.swift */,
+				F180034B29A61524000E2E28 /* Service */,
 				F180033E29A60C5B000E2E28 /* Extension */,
 				F180033329A60438000E2E28 /* Home */,
 				F180032729A6010A000E2E28 /* Assets.xcassets */,
@@ -132,6 +143,26 @@
 				F180034929A60D16000E2E28 /* UIViewController+Rx.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		F180034B29A61524000E2E28 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F180034C29A6153D000E2E28 /* Entity.swift */,
+				F180034E29A61564000E2E28 /* Repository.swift */,
+				F180035029A616A8000E2E28 /* Question */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F180035029A616A8000E2E28 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				F180035129A616B1000E2E28 /* QuestionEntity.swift */,
+				F180035329A6171F000E2E28 /* QuestionObject.swift */,
+				F180035529A61834000E2E28 /* QuestionRepository.swift */,
+			);
+			path = Question;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,11 +281,16 @@
 			files = (
 				F180033729A6049D000E2E28 /* HomeViewReactor.swift in Sources */,
 				F180034429A60CE7000E2E28 /* UITableView+Rx.swift in Sources */,
+				F180034F29A61564000E2E28 /* Repository.swift in Sources */,
+				F180034D29A6153D000E2E28 /* Entity.swift in Sources */,
+				F180035229A616B1000E2E28 /* QuestionEntity.swift in Sources */,
 				F180034629A60CF5000E2E28 /* UICollectionView+.swift in Sources */,
 				F180031F29A60108000E2E28 /* AppDelegate.swift in Sources */,
+				F180035629A61834000E2E28 /* QuestionRepository.swift in Sources */,
 				F180033B29A608D3000E2E28 /* HomeQuestionTableViewCell.swift in Sources */,
 				F180034229A60CD9000E2E28 /* UITableView+.swift in Sources */,
 				F180034A29A60D16000E2E28 /* UIViewController+Rx.swift in Sources */,
+				F180035429A6171F000E2E28 /* QuestionObject.swift in Sources */,
 				F180034829A60D04000E2E28 /* UICollectionView+Rx.swift in Sources */,
 				F180034029A60C6E000E2E28 /* Loadable.swift in Sources */,
 				F180032129A60108000E2E28 /* SceneDelegate.swift in Sources */,
