@@ -10,6 +10,7 @@ target 'Selfer' do
   pod 'ReactorKit'
   pod 'RxCocoa'
   pod 'RxRelay'
+  pod 'RxDataSources', '~> 5.0'
   pod 'SnapKit'
   pod 'Then'
 
