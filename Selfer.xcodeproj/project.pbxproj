@@ -10,8 +10,6 @@
 		9A6D1D65EB1CC0BD772A045F /* Pods_Selfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D581BF3D1F737FD019D73403 /* Pods_Selfer.framework */; };
 		F180031F29A60108000E2E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180031E29A60108000E2E28 /* AppDelegate.swift */; };
 		F180032129A60108000E2E28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180032029A60108000E2E28 /* SceneDelegate.swift */; };
-		F180032329A60108000E2E28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180032229A60108000E2E28 /* ViewController.swift */; };
-		F180032629A60109000E2E28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F180032429A60109000E2E28 /* Main.storyboard */; };
 		F180032829A6010A000E2E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F180032729A6010A000E2E28 /* Assets.xcassets */; };
 		F180032B29A6010A000E2E28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F180032929A6010A000E2E28 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -22,8 +20,6 @@
 		F180031B29A60108000E2E28 /* Selfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Selfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F180031E29A60108000E2E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F180032029A60108000E2E28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F180032229A60108000E2E28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F180032529A60109000E2E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F180032729A6010A000E2E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F180032A29A6010A000E2E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F180032C29A6010A000E2E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,7 +44,6 @@
 				F968F3DA6E7CD8260C8CB856 /* Pods-Selfer.debug.xcconfig */,
 				53DA460E560CEEDC3FDA43E9 /* Pods-Selfer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,8 +78,6 @@
 			children = (
 				F180031E29A60108000E2E28 /* AppDelegate.swift */,
 				F180032029A60108000E2E28 /* SceneDelegate.swift */,
-				F180032229A60108000E2E28 /* ViewController.swift */,
-				F180032429A60109000E2E28 /* Main.storyboard */,
 				F180032729A6010A000E2E28 /* Assets.xcassets */,
 				F180032929A6010A000E2E28 /* LaunchScreen.storyboard */,
 				F180032C29A6010A000E2E28 /* Info.plist */,
@@ -154,7 +147,6 @@
 			files = (
 				F180032B29A6010A000E2E28 /* LaunchScreen.storyboard in Resources */,
 				F180032829A6010A000E2E28 /* Assets.xcassets in Resources */,
-				F180032629A60109000E2E28 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,7 +199,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F180032329A60108000E2E28 /* ViewController.swift in Sources */,
 				F180031F29A60108000E2E28 /* AppDelegate.swift in Sources */,
 				F180032129A60108000E2E28 /* SceneDelegate.swift in Sources */,
 			);
@@ -216,14 +207,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F180032429A60109000E2E28 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F180032529A60109000E2E28 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F180032929A6010A000E2E28 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -364,9 +347,9 @@
 				INFOPLIST_FILE = Selfer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -393,9 +376,9 @@
 				INFOPLIST_FILE = Selfer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
