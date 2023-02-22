@@ -20,10 +20,14 @@ final class HomeViewReactor: Reactor {
     }
     
     struct State {
+        var sections: [HomeSection]
         var isLoading: Bool
     }
     
-    let initialState: State = State(isLoading: false)
+    let initialState: State = State(
+        sections: [],
+        isLoading: false
+    )
     
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
@@ -39,12 +43,18 @@ final class HomeViewReactor: Reactor {
         var newState = state
         switch mutation {
         case .reloadData:
-            print("# TODO: - Reload Data")
+            newState.sections = self.makeSections()
             
         case .setLoading(let isLoading):
             newState.isLoading = isLoading
         }
-        return state
+        return newState
+    }
+    
+    private func makeSections() -> [HomeSection] {
+        // TODO: - Add Repository + Make Sections
+        
+        return [.init(items: [.questionModel(.init(title: "Test Title", subtitle: "Test Subtitle"))])]
     }
     
 }
