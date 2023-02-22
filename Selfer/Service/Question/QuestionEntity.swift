@@ -19,7 +19,7 @@ final class QuestionEntity {
         self.question = question
         self.answer = answer
         self.isComplete = isComplete
-        self.createdAt = createAt
+        self.createdAt = createdAt
     }
     
 }

@@ -19,13 +19,13 @@ final class QuestionObject: Object {
         question: String,
         answer: String,
         isComplete: Bool,
-        createAt: Date
+        createdAt: Date
     ) {
         self.init()
         self.question = question
         self.answer = answer
         self.isComplete = isComplete
-        self.createdAt = createAt
+        self.createdAt = createdAt
     }
     
     var model: QuestionEntity {
@@ -34,7 +34,7 @@ final class QuestionObject: Object {
                 question: self.question,
                 answer: self.answer,
                 isComplete: self.isComplete,
-                createAt: self.createdAt
+                createdAt: self.createdAt
             )
         }
     }
