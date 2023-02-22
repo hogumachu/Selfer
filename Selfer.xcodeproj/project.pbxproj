@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A6D1D65EB1CC0BD772A045F /* Pods_Selfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D581BF3D1F737FD019D73403 /* Pods_Selfer.framework */; };
 		F180031F29A60108000E2E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180031E29A60108000E2E28 /* AppDelegate.swift */; };
 		F180032129A60108000E2E28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180032029A60108000E2E28 /* SceneDelegate.swift */; };
 		F180032329A60108000E2E28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180032229A60108000E2E28 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53DA460E560CEEDC3FDA43E9 /* Pods-Selfer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfer.release.xcconfig"; path = "Target Support Files/Pods-Selfer/Pods-Selfer.release.xcconfig"; sourceTree = "<group>"; };
+		D581BF3D1F737FD019D73403 /* Pods_Selfer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Selfer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F180031B29A60108000E2E28 /* Selfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Selfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F180031E29A60108000E2E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F180032029A60108000E2E28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		F180032729A6010A000E2E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F180032A29A6010A000E2E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F180032C29A6010A000E2E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F968F3DA6E7CD8260C8CB856 /* Pods-Selfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfer.debug.xcconfig"; path = "Target Support Files/Pods-Selfer/Pods-Selfer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A6D1D65EB1CC0BD772A045F /* Pods_Selfer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A57D6311EC7F38E1B90B4F5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F968F3DA6E7CD8260C8CB856 /* Pods-Selfer.debug.xcconfig */,
+				53DA460E560CEEDC3FDA43E9 /* Pods-Selfer.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CC263B44A75DBCDDED42AFCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D581BF3D1F737FD019D73403 /* Pods_Selfer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F180031229A60108000E2E28 = {
 			isa = PBXGroup;
 			children = (
 				F180031D29A60108000E2E28 /* Selfer */,
 				F180031C29A60108000E2E28 /* Products */,
+				A57D6311EC7F38E1B90B4F5A /* Pods */,
+				CC263B44A75DBCDDED42AFCB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F180032F29A6010A000E2E28 /* Build configuration list for PBXNativeTarget "Selfer" */;
 			buildPhases = (
+				F29C008F6464B210C779BA45 /* [CP] Check Pods Manifest.lock */,
 				F180031729A60108000E2E28 /* Sources */,
 				F180031829A60108000E2E28 /* Frameworks */,
 				F180031929A60108000E2E28 /* Resources */,
+				2204D8D974F8A78A5E163B77 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2204D8D974F8A78A5E163B77 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Selfer/Pods-Selfer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Selfer/Pods-Selfer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Selfer/Pods-Selfer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F29C008F6464B210C779BA45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Selfer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F180031729A60108000E2E28 /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		F180033029A6010A000E2E28 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F968F3DA6E7CD8260C8CB856 /* Pods-Selfer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		F180033129A6010A000E2E28 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53DA460E560CEEDC3FDA43E9 /* Pods-Selfer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
