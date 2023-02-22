@@ -28,6 +28,9 @@
 		F180035229A616B1000E2E28 /* QuestionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180035129A616B1000E2E28 /* QuestionEntity.swift */; };
 		F180035429A6171F000E2E28 /* QuestionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180035329A6171F000E2E28 /* QuestionObject.swift */; };
 		F180035629A61834000E2E28 /* QuestionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180035529A61834000E2E28 /* QuestionRepository.swift */; };
+		F180035929A61CDC000E2E28 /* QuestionCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180035829A61CDC000E2E28 /* QuestionCreateViewController.swift */; };
+		F180035D29A61E69000E2E28 /* QuestionCreateViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180035C29A61E69000E2E28 /* QuestionCreateViewReactor.swift */; };
+		F180035F29A61F95000E2E28 /* QuestionCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180035E29A61F95000E2E28 /* QuestionCreateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		F180035129A616B1000E2E28 /* QuestionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionEntity.swift; sourceTree = "<group>"; };
 		F180035329A6171F000E2E28 /* QuestionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionObject.swift; sourceTree = "<group>"; };
 		F180035529A61834000E2E28 /* QuestionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRepository.swift; sourceTree = "<group>"; };
+		F180035829A61CDC000E2E28 /* QuestionCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCreateViewController.swift; sourceTree = "<group>"; };
+		F180035C29A61E69000E2E28 /* QuestionCreateViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCreateViewReactor.swift; sourceTree = "<group>"; };
+		F180035E29A61F95000E2E28 /* QuestionCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCreateView.swift; sourceTree = "<group>"; };
 		F968F3DA6E7CD8260C8CB856 /* Pods-Selfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfer.debug.xcconfig"; path = "Target Support Files/Pods-Selfer/Pods-Selfer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +119,7 @@
 				F180034B29A61524000E2E28 /* Service */,
 				F180033E29A60C5B000E2E28 /* Extension */,
 				F180033329A60438000E2E28 /* Home */,
+				F180035729A61C63000E2E28 /* Question */,
 				F180032729A6010A000E2E28 /* Assets.xcassets */,
 				F180032929A6010A000E2E28 /* LaunchScreen.storyboard */,
 				F180032C29A6010A000E2E28 /* Info.plist */,
@@ -163,6 +170,24 @@
 				F180035529A61834000E2E28 /* QuestionRepository.swift */,
 			);
 			path = Question;
+			sourceTree = "<group>";
+		};
+		F180035729A61C63000E2E28 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				F180035A29A61D23000E2E28 /* Create */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		F180035A29A61D23000E2E28 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				F180035829A61CDC000E2E28 /* QuestionCreateViewController.swift */,
+				F180035C29A61E69000E2E28 /* QuestionCreateViewReactor.swift */,
+				F180035E29A61F95000E2E28 /* QuestionCreateView.swift */,
+			);
+			path = Create;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,8 +307,10 @@
 				F180033729A6049D000E2E28 /* HomeViewReactor.swift in Sources */,
 				F180034429A60CE7000E2E28 /* UITableView+Rx.swift in Sources */,
 				F180034F29A61564000E2E28 /* Repository.swift in Sources */,
+				F180035F29A61F95000E2E28 /* QuestionCreateView.swift in Sources */,
 				F180034D29A6153D000E2E28 /* Entity.swift in Sources */,
 				F180035229A616B1000E2E28 /* QuestionEntity.swift in Sources */,
+				F180035D29A61E69000E2E28 /* QuestionCreateViewReactor.swift in Sources */,
 				F180034629A60CF5000E2E28 /* UICollectionView+.swift in Sources */,
 				F180031F29A60108000E2E28 /* AppDelegate.swift in Sources */,
 				F180035629A61834000E2E28 /* QuestionRepository.swift in Sources */,
@@ -295,6 +322,7 @@
 				F180034029A60C6E000E2E28 /* Loadable.swift in Sources */,
 				F180032129A60108000E2E28 /* SceneDelegate.swift in Sources */,
 				F180033D29A60B29000E2E28 /* HomeSection.swift in Sources */,
+				F180035929A61CDC000E2E28 /* QuestionCreateViewController.swift in Sources */,
 				F180033929A60634000E2E28 /* HomeView.swift in Sources */,
 				F180033529A60442000E2E28 /* HomeViewController.swift in Sources */,
 			);
