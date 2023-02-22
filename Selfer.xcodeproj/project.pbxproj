@@ -12,6 +12,9 @@
 		F180032129A60108000E2E28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180032029A60108000E2E28 /* SceneDelegate.swift */; };
 		F180032829A6010A000E2E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F180032729A6010A000E2E28 /* Assets.xcassets */; };
 		F180032B29A6010A000E2E28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F180032929A6010A000E2E28 /* LaunchScreen.storyboard */; };
+		F180033529A60442000E2E28 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180033429A60442000E2E28 /* HomeViewController.swift */; };
+		F180033729A6049D000E2E28 /* HomeViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180033629A6049D000E2E28 /* HomeViewReactor.swift */; };
+		F180033929A60634000E2E28 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180033829A60634000E2E28 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		F180032729A6010A000E2E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F180032A29A6010A000E2E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F180032C29A6010A000E2E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F180033429A60442000E2E28 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F180033629A6049D000E2E28 /* HomeViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewReactor.swift; sourceTree = "<group>"; };
+		F180033829A60634000E2E28 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F968F3DA6E7CD8260C8CB856 /* Pods-Selfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfer.debug.xcconfig"; path = "Target Support Files/Pods-Selfer/Pods-Selfer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,11 +84,22 @@
 			children = (
 				F180031E29A60108000E2E28 /* AppDelegate.swift */,
 				F180032029A60108000E2E28 /* SceneDelegate.swift */,
+				F180033329A60438000E2E28 /* Home */,
 				F180032729A6010A000E2E28 /* Assets.xcassets */,
 				F180032929A6010A000E2E28 /* LaunchScreen.storyboard */,
 				F180032C29A6010A000E2E28 /* Info.plist */,
 			);
 			path = Selfer;
+			sourceTree = "<group>";
+		};
+		F180033329A60438000E2E28 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F180033429A60442000E2E28 /* HomeViewController.swift */,
+				F180033629A6049D000E2E28 /* HomeViewReactor.swift */,
+				F180033829A60634000E2E28 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +216,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F180033729A6049D000E2E28 /* HomeViewReactor.swift in Sources */,
 				F180031F29A60108000E2E28 /* AppDelegate.swift in Sources */,
 				F180032129A60108000E2E28 /* SceneDelegate.swift in Sources */,
+				F180033929A60634000E2E28 /* HomeView.swift in Sources */,
+				F180033529A60442000E2E28 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
