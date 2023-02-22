@@ -29,6 +29,12 @@ final class HomeView: UIView {
             make.edges.equalToSuperview()
         }
         
+        self.addSubview(self.addButton)
+        self.addButton.snp.makeConstraints { make in
+            make.size.equalTo(CGSize(width: 50, height: 50))
+            make.trailing.bottom.equalToSuperview().inset(30)
+        }
+        
         self.addSubview(self.loadingView)
         self.loadingView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -43,9 +49,14 @@ final class HomeView: UIView {
         self.loadingView.do {
             $0.backgroundColor = .black.withAlphaComponent(0.8)
         }
+        
+        self.addButton.do {
+            $0.backgroundColor = .systemPink
+        }
     }
     
     let tableView = UITableView(frame: .zero)
+    let addButton = UIButton(frame: .zero)
     let loadingView = UIView(frame: .zero)
     
 }
@@ -58,6 +69,15 @@ extension HomeView: Loadable {
     
     func hideLoading() {
         self.loadingView.isHidden = true
+    }
+    
+}
+
+extension Reactive where Base: HomeView {
+    
+    var addButtonTap: ControlEvent<Void> {
+        let soruce = base.addButton.rx.tap
+        return ControlEvent(events: soruce)
     }
     
 }
