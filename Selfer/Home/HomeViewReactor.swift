@@ -24,6 +24,10 @@ final class HomeViewReactor: Reactor {
         var isLoading: Bool
     }
     
+    init(questionRepository: QuestionRepository<QuestionEntity>) {
+        self.questionRepository = questionRepository
+    }
+    
     let initialState: State = State(
         sections: [],
         isLoading: false
@@ -52,9 +56,10 @@ final class HomeViewReactor: Reactor {
     }
     
     private func makeSections() -> [HomeSection] {
-        // TODO: - Add Repository + Make Sections
-        
-        return [.init(items: [.questionModel(.init(title: "Test Title", subtitle: "Test Subtitle"))])]
+        let items = self.questionRepository.getAll(where: nil).map { HomeItem.questionModel(.init(title: $0.question, subtitle: $0.answer)) }
+        return [.init(items: items)]
     }
+    
+    private let questionRepository: QuestionRepository<QuestionEntity>
     
 }
