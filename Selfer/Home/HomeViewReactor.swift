@@ -55,6 +55,10 @@ final class HomeViewReactor: Reactor {
         return newState
     }
     
+    func reactorForQuestionCreate() -> QuestionCreateViewReactor {
+        return QuestionCreateViewReactor(questionRepository: self.questionRepository)
+    }
+    
     private func makeSections() -> [HomeSection] {
         let items = self.questionRepository.getAll(where: nil).map { HomeItem.questionModel(.init(title: $0.question, subtitle: $0.answer)) }
         return [.init(items: items)]

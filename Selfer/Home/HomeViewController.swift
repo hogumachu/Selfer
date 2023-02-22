@@ -53,6 +53,17 @@ final class HomeViewController: UIViewController, View {
             })
             .disposed(by: self.disposeBag)
         
+        self.homeView.rx.addButtonTap
+            .map { reactor.reactorForQuestionCreate() }
+            .withUnretained(self)
+            .subscribe(onNext: { viewController, reactor in
+                let qcViewController = QuestionCreateViewController(reactor: reactor)
+                let navigationController = UINavigationController(rootViewController: qcViewController)
+                navigationController.modalPresentationStyle = .overFullScreen
+                viewController.present(navigationController, animated: true, completion: nil)
+            })
+            .disposed(by: self.disposeBag)
+        
         reactor.state.map { $0.sections }
         .bind(to: self.homeView.tableView.rx.items(dataSource: self.dataSource))
         .disposed(by: self.disposeBag)
@@ -63,6 +74,12 @@ final class HomeViewController: UIViewController, View {
         self.homeView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+    }
+    
+    private func showCreateView(repository: QuestionRepository<QuestionEntity>) {
+        let reactor = QuestionCreateViewReactor(questionRepository: repository)
+        let viewController = QuestionCreateViewController(reactor: reactor)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     private let dataSource = RxTableViewSectionedReloadDataSource<HomeSection>(configureCell: { _, tableView, indexPath, item in
