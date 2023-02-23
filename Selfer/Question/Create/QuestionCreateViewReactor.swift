@@ -21,11 +21,13 @@ final class QuestionCreateViewReactor: Reactor {
         case setAnswer(String)
         case setLoading(Bool)
         case createQuestion
+        case updatePage
     }
     
     struct State {
         var question: String
         var answer: String
+        var page: Int
         var isLoading: Bool
     }
     
@@ -36,6 +38,7 @@ final class QuestionCreateViewReactor: Reactor {
     let initialState: State = State(
         question: "",
         answer: "",
+        page: 0,
         isLoading: false
     )
     
@@ -51,9 +54,10 @@ final class QuestionCreateViewReactor: Reactor {
             
         case .addButtonTap:
             let startLoading = Observable<Mutation>.just(.setLoading(true))
-            let createQuestion = Observable<Mutation>.just(.createQuestion)
+//            let createQuestion = Observable<Mutation>.just(.createQuestion)
+            let updatePage = Observable<Mutation>.just(.updatePage)
             let endLoading = Observable<Mutation>.just(.setLoading(false))
-            return .concat([startLoading, createQuestion, endLoading])
+            return .concat([startLoading, updatePage, endLoading])
         }
     }
     
@@ -65,6 +69,9 @@ final class QuestionCreateViewReactor: Reactor {
             
         case .setAnswer(let answer):
             newState.answer = answer
+            
+        case .setLoading(let isLoading):
+            newState.isLoading = isLoading
             
         case .createQuestion:
             let item = QuestionEntity(
@@ -79,8 +86,8 @@ final class QuestionCreateViewReactor: Reactor {
                 
             }
             
-        case .setLoading(let isLoading):
-            newState.isLoading = isLoading
+        case .updatePage:
+            newState.page = state.page == 0 ? 1 : 0
         }
         return newState
     }

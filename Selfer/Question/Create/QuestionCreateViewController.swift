@@ -30,6 +30,12 @@ final class QuestionCreateViewController: UIViewController, View {
     }
     
     func bind(reactor: QuestionCreateViewReactor) {
+        self.rx.viewDidAppear
+            .withUnretained(self)
+            .observe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: { viewController, _ in viewController.createView.updatePage(0) })
+            .disposed(by: self.disposeBag)
+        
         self.createView.rx.addButtonTap
             .map { Reactor.Action.addButtonTap }
             .bind(to: reactor.action)
@@ -44,6 +50,12 @@ final class QuestionCreateViewController: UIViewController, View {
             .map { Reactor.Action.updateAnswer($0 ?? "") }
             .bind(to: reactor.action)
             .disposed(by: self.disposeBag)
+        
+        reactor.state.map { $0.page }
+        .skip(1)
+        .distinctUntilChanged()
+        .bind(to: self.createView.rx.page)
+        .disposed(by: self.disposeBag)
     }
     
     private func setupCreateView() {

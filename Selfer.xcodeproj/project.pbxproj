@@ -31,6 +31,7 @@
 		F180035929A61CDC000E2E28 /* QuestionCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180035829A61CDC000E2E28 /* QuestionCreateViewController.swift */; };
 		F180035D29A61E69000E2E28 /* QuestionCreateViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180035C29A61E69000E2E28 /* QuestionCreateViewReactor.swift */; };
 		F180035F29A61F95000E2E28 /* QuestionCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180035E29A61F95000E2E28 /* QuestionCreateView.swift */; };
+		F180036529A78A8A000E2E28 /* CommonTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180036429A78A8A000E2E28 /* CommonTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		F180035829A61CDC000E2E28 /* QuestionCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCreateViewController.swift; sourceTree = "<group>"; };
 		F180035C29A61E69000E2E28 /* QuestionCreateViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCreateViewReactor.swift; sourceTree = "<group>"; };
 		F180035E29A61F95000E2E28 /* QuestionCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCreateView.swift; sourceTree = "<group>"; };
+		F180036429A78A8A000E2E28 /* CommonTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTextView.swift; sourceTree = "<group>"; };
 		F968F3DA6E7CD8260C8CB856 /* Pods-Selfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfer.debug.xcconfig"; path = "Target Support Files/Pods-Selfer/Pods-Selfer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 				F180032029A60108000E2E28 /* SceneDelegate.swift */,
 				F180034B29A61524000E2E28 /* Service */,
 				F180033E29A60C5B000E2E28 /* Extension */,
+				F180036229A78A6C000E2E28 /* Common */,
 				F180033329A60438000E2E28 /* Home */,
 				F180035729A61C63000E2E28 /* Question */,
 				F180032729A6010A000E2E28 /* Assets.xcassets */,
@@ -188,6 +191,22 @@
 				F180035E29A61F95000E2E28 /* QuestionCreateView.swift */,
 			);
 			path = Create;
+			sourceTree = "<group>";
+		};
+		F180036229A78A6C000E2E28 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F180036329A78A74000E2E28 /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F180036329A78A74000E2E28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F180036429A78A8A000E2E28 /* CommonTextView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F180033729A6049D000E2E28 /* HomeViewReactor.swift in Sources */,
+				F180036529A78A8A000E2E28 /* CommonTextView.swift in Sources */,
 				F180034429A60CE7000E2E28 /* UITableView+Rx.swift in Sources */,
 				F180034F29A61564000E2E28 /* Repository.swift in Sources */,
 				F180035F29A61F95000E2E28 /* QuestionCreateView.swift in Sources */,
